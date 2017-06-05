@@ -8,14 +8,17 @@
   },
   "devDependencies": {
     "eslint": "^3.19.0",
+    "gh-pages": "^1.0.0",
     "react-scripts": "1.0.7",
     "ws": "^3.0.0"
   },
-  "homepage" : "http://dukemiller.github.io/simple-chat",
+  "homepage": "http://dukemiller.github.io/simple-chat",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }
