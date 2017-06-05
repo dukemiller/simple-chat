@@ -9,13 +9,18 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2>Simple (Websocket) Chat</h2>
         </div>
 
-        <Chat username={`Username${Math.floor((Math.random() * 10000) + 1)}`} />
+        <Chat username={this.generateUsername()} />
 
       </div>
     );
+  }
+
+  generateUsername() {
+    let number = Math.floor((Math.random() * 10000) + 1);
+    return `Username${number}`;
   }
 }
 
